@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}The code of my app{% endblock %}
+{% block content %}
+<h1>
+  <p>
+        <form method="POST" action="/random_run">
+            <input class="name" name="name" placeholder="Number from 1-100">
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="inlineCheckbox1" value="1">
+        <label class="form-check-label" for="inlineCheckbox1">enable numbers</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="inlineCheckbox2" value="1">
+        <label class="form-check-label" for="inlineCheckbox2">enable symbols</label>
+    </div>
+            <input type="submit" value="Generate" />
+        </form>
+  </p>
+
+</h1>
+{% endblock %}

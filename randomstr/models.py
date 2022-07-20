@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+class Randomstr(models.Model):
+    
+    length = models.CharField(max_length=100)
+    digits = models.BooleanField(default=False)
+    specials = models.BooleanField(default=False)

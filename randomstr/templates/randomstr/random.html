@@ -1,0 +1,26 @@
+{% extends "about/base.html" %}
+{% block title %}random string{% endblock %}
+{% block content %}
+<h1>
+  <p>
+    <form method="get">
+        <centre>
+            {% csrf_token %}
+            <input class="name" name="length" placeholder="Number from 1-100">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="digits" value="True">
+                    <label class="form-check-label" for="digits">enable numbers</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="specials" value="True">
+                    <label class="form-check-label" for="specials">enable symbols</label>
+                </div>
+            <input type="submit" value="Generate" />
+            <p>
+                {{rand_string}}
+            </p>
+        </centre>
+  </p>
+
+</h1>
+{% endblock %}
